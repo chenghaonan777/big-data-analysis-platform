@@ -1,0 +1,18 @@
+山西水泥公司电力数据清洗报告
+==================================================
+清洗时间: 2025-06-02 21:15:01
+目标代码: 31B0
+原始文件: C:\Users\strugglr\Desktop\items\DataAnalysisProject\data\pollution.xlsx
+
+原始数据: 326186 行, 13 列
+筛选数据: 5152 行
+清洗数据: 5018 行
+删除记录: 134 行 (2.60%)
+
+清洗详情:
+  original_rows: 5152
+  final_rows: 5018
+  removed_rows: 134
+  removal_percentage: 2.6
+  steps: [{'step': '处理缺失值', 'before_rows': 5152, 'after_rows': 5152, 'removed_rows': 0, 'missing_values_found': 0}, {'step': '删除重复数据', 'before_rows': 5152, 'after_rows': 5152, 'removed_rows': 0, 'duplicates_found': 0}, {'step': '标准化数据格式', 'before_rows': 5152, 'after_rows': 5152, 'removed_rows': 0, 'format_changes': 1}, {'step': '处理异常值', 'before_rows': 5152, 'after_rows': 5018, 'removed_rows': 134, 'outliers_processed': 134}, {'step': '规范化文本数据', 'before_rows': 5018, 'after_rows': 5018, 'removed_rows': 0, 'normalized_columns': 4}, {'step': '验证业务规则', 'before_rows': 5018, 'after_rows': 5018, 'removed_rows': 0, 'rules_checked': 1, 'violations_removed': 0}]
+  cleaning_time: 2025-06-02 21:15:25

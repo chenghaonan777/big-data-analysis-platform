@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Hadoop集群配置 -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://hadoop-master:9000</value>
+        <description>HDFS默认文件系统</description>
+    </property>
+
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/hadoop/tmp</value>
+        <description>Hadoop临时目录</description>
+    </property>
+
+    <property>
+        <name>hadoop.native.lib</name>
+        <value>true</value>
+        <description>启用本地库</description>
+    </property>
+
+    <property>
+        <name>io.file.buffer.size</name>
+        <value>131072</value>
+        <description>文件缓冲区大小</description>
+    </property>
+</configuration>

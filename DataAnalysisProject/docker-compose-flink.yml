@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  # Flink JobManager
+  flink-jobmanager:
+    image: flink:1.13.6-scala_2.12
+    container_name: flink-jobmanager
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - FLINK_PROPERTIES=jobmanager.rpc.address: flink-jobmanager
+
+  # Flink TaskManager (3 instances for 3 task slots)
+  flink-taskmanager-1:
+    image: flink:1.13.6-scala_2.12
+    container_name: flink-taskmanager-1
+    restart: always
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - FLINK_PROPERTIES=jobmanager.rpc.address: flink-jobmanager
+taskmanager.numberOfTaskSlots: 1
+    depends_on:
+      - flink-jobmanager
+
+  flink-taskmanager-2:
+    image: flink:1.13.6-scala_2.12
+    container_name: flink-taskmanager-2
+    restart: always
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - FLINK_PROPERTIES=jobmanager.rpc.address: flink-jobmanager
+taskmanager.numberOfTaskSlots: 1
+    depends_on:
+      - flink-jobmanager
+
+  flink-taskmanager-3:
+    image: flink:1.13.6-scala_2.12
+    container_name: flink-taskmanager-3
+    restart: always
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - FLINK_PROPERTIES=jobmanager.rpc.address: flink-jobmanager
+taskmanager.numberOfTaskSlots: 1
+    depends_on:
+      - flink-jobmanager

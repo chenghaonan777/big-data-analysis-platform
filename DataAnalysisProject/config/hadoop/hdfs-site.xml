@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- HDFS配置 -->
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/hadoop/data/namenode</value>
+        <description>NameNode数据目录</description>
+    </property>
+
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/hadoop/data/datanode</value>
+        <description>DataNode数据目录</description>
+    </property>
+
+    <property>
+        <name>dfs.replication</name>
+        <value>2</value>
+        <description>副本数量</description>
+    </property>
+
+    <property>
+        <name>dfs.blocksize</name>
+        <value>134217728</value>
+        <description>块大小128MB</description>
+    </property>
+
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+        <description>禁用权限检查</description>
+    </property>
+</configuration>
